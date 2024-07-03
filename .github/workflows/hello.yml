@@ -4,11 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
-  workflow_dispatch:
-
 jobs:
   hello:
     runs-on: ubuntu-latest
@@ -17,10 +12,13 @@ jobs:
       - name: Hello world step
         run: echo "Hellss"
         shell: bash
-  goodbye:
+  update-branhces:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
       - uses: actions/checkout@v2
-      - name: goodbye world step
-        run: echo "goodbye swsww"
-        shell: bash
+      - name: Update ALL THE PRS
+        uses: castastrophe/actions-pr-auto-update
+        with:
+          token: ${{ secrets.USER_TOKEN }}
