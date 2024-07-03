@@ -1,6 +1,9 @@
 name: Pull request update
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
