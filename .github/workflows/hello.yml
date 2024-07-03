@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Update ALL THE PRS!
-        uses: castastrophe/actions-pr-auto-update
+        uses: https://github.com/castastrophe/actions-pr-auto-update/tree/main
         with:
           token: ${{ secrets.USER_TOKEN }}
           include_drafts: true
