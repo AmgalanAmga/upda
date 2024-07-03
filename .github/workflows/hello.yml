@@ -1,30 +1,4 @@
-# name: Hello worlds
-
-# on:
-#   push:
-#     branches:
-#       - main
-#   pull_request:
-#     branches:
-#       - main
-#   workflow_dispatch:
-
-# jobs:
-#   hello:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#       - name: Hello world step
-#         run: echo "Hellss"
-#         shell: bash
-#   goodbye:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#       - name: goodbye world step
-#         run: echo "goodbye swsww"
-#         shell: bash
-name: Pull request update
+name: Hello world
 
 on:
   push:
@@ -36,14 +10,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  autoupdate:
-    runs-on: ubuntu-lastest
-    permissions:
-      pull-requests: write
+  hello:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Update ALL THE PRS! 🎉
-        uses: castastrophe/actions-pr-auto-update
-        with:
-          token: ${{ secrets.USER_TOKEN }}
-          include_drafts: true
+      - name: Hello world step
+        run: echo "Hellss"
+        shell: bash
+  goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: goodbye world step
+        run: echo "goodbye swsww"
+        shell: bash
