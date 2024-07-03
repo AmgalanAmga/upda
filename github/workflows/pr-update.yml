@@ -1,0 +1,21 @@
+name: Pull request update
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    autoupdate:
+        runs-on: ubuntu-latest
+        permissions:
+            pull-requests: write
+        steps:
+        - uses: actions/checkout@v3
+        - name: Update ALL THE PRS! 🎉
+            uses: castastrophe/actions-pr-auto-update
+            with:
+                # defaults to github.token
+                token: ${{ secrets.USER_TOKEN }}
+                # Optional: set this to true if you want to include draft PRs in those to be updated
+                include_drafts: true
