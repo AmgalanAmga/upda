@@ -12,13 +12,11 @@ jobs:
       - name: Hello world step
         run: echo "Hellss"
         shell: bash
-  update-branhces:
+  updatebranhces:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
     steps:
-      - uses: actions/checkout@v2
-      - name: Update ALL THE PRS
-        uses: castastrophe/actions-pr-auto-update
-        with:
-          token: ${{ secrets.USER_TOKEN }}
+      - uses: docker://chinthakagodawita/autoupdate-action:v1
+        env:
+          GITHUB_TOKEN: "${{ secrets.USER_TOKEN }}"
