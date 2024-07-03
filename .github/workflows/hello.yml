@@ -1,4 +1,4 @@
-name: Hello world
+name: Update branch
 
 on:
   push:
@@ -8,18 +8,14 @@ on:
     branches:
       - main
 jobs:
-  hello:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Hello world step
-        run: echo "Hellss"
-        shell: bash
   updatebranhces:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
     steps:
-      - uses: docker://chinthakagodawita/autoupdate-action:v1
-        env:
-          GITHUB_TOKEN: "${{ secrets.USER_TOKEN }}"
+      - uses: actions/checkout@v3
+      - name: Update ALL THE PRS!
+        uses: castastrophe/actions-pr-auto-update
+        with:
+          token: ${{ secrets.USER_TOKEN }}
+          include_drafts: true
