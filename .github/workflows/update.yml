@@ -17,7 +17,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Update ALL THE PRS! 🎉
-        uses: https://github.com/castastrophe/actions-pr-auto-update
-        with:
-          token: ${{ secrets.USER_TOKEN }}
-          include_drafts: true
+        run: echo "Hellss"
+        shell: bash
+        # uses: https://github.com/castastrophe/actions-pr-auto-update
+        # with:
+        #   token: ${{ secrets.USER_TOKEN }}
+        #   include_drafts: true
