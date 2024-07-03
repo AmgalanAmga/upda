@@ -22,5 +22,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: goodbye world step
-        run: echo "goodbye swsww"
+        run: echo "goodbye swsww ${{ secrets.USER_TOKEN }}"
         shell: bash
