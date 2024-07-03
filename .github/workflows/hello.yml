@@ -1,4 +1,4 @@
-name: Hello world
+name: Update branch
 
 on:
   push:
@@ -7,20 +7,15 @@ on:
   pull_request:
     branches:
       - main
-  workflow_dispatch:
-
 jobs:
-  hello:
+  updatebranhces:
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
     steps:
-      - uses: actions/checkout@v2
-      - name: Hello world step
-        run: echo "Hellss"
-        shell: bash
-  goodbye:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: goodbye world step
-        run: echo "goodbye swsww"
-        shell: bash
+      - uses: actions/checkout@v3
+      - name: Update ALL THE PRS!
+        uses: castastrophe/actions-pr-auto-update
+        with:
+          token: ${{ secrets.USER_TOKEN }}
+          include_drafts: true
