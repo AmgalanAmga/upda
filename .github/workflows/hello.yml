@@ -1,9 +1,6 @@
 name: Update branch
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
@@ -17,5 +14,5 @@ jobs:
       - name: Update ALL THE PRS!
         uses: https://github.com/castastrophe/actions-pr-auto-update/tree/main
         with:
-          token: ${{ secrets.USER_TOKEN }}
+          token: ${{ secrets.Update_branch }}
           include_drafts: true
