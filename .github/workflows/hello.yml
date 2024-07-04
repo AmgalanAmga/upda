@@ -3,7 +3,7 @@ name: Update branch
 on:
   pull_request:
     types:
-      - merged
+      - closed
     branches:
       - main
 
