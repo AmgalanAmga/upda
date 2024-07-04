@@ -1,7 +1,7 @@
 name: Update branch
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 jobs:
@@ -15,3 +15,4 @@ jobs:
         uses: castastrophe/actions-pr-auto-update@main
         with:
           token: ${{ secrets.USER_TOKEN }}
+          include_labels: "update"
