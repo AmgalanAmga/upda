@@ -4,11 +4,7 @@ on:
   pull_request:
     types:
       - closed
-    branches:
-      - main
-  pull_request_target:
-    types:
-      - "labeled"
+      - labeled
     branches:
       - main
 
