@@ -3,8 +3,6 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
-console.log("first");
-
 export default function RootLayout({
   children,
 }: Readonly<{
