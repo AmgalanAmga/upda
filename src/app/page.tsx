@@ -1,4 +1,4 @@
-
+"use lient"
 const Home = () => {
   return <div>d</div>;
 };
