@@ -1,9 +1,6 @@
 name: Update branch
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
@@ -15,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Update ALL THE PRS!
-        uses: castastrophe/actions-pr-auto-update
+        uses: castastrophe/actions-pr-auto-update@main
         with:
           token: ${{ secrets.USER_TOKEN }}
           include_drafts: true
