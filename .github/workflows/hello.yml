@@ -6,13 +6,18 @@ on:
       - closed
     branches:
       - main
+  pull_request_target:
+    types:
+      - "labeled"
+    branches:
+      - main
 
 permissions:
   pull-requests: write
 
 jobs:
   updatebranhces:
-    if: github.event.pull_request.merged == true
+    if: "${{  github.event.pull_request.merged == true || github.event.label.name == 'PR status: code ready' }}"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
