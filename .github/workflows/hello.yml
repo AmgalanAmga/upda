@@ -16,6 +16,11 @@ jobs:
     if: "${{ github.event.label.name == 'Update Me' }}"
     steps:
       - uses: actions/checkout@v3
+      - name: Validate USER_TOKEN
+        run: echo "USER_TOKEN is set"
+        env:
+          USER_TOKEN: ${{ secrets.USER_TOKEN }}
+      - uses: actions/checkout@v3
       - name: Update ALL THE PRS!
         uses: castastrophe/actions-pr-auto-update@main
         with:
