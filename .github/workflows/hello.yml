@@ -14,5 +14,5 @@ jobs:
       - name: Update ALL THE PRS!
         uses: castastrophe/actions-pr-auto-update@main
         with:
-          token: ${{ secrets.Update_branch }}
+          token: ${{ secrets.USER_TOKEN }}
           include_drafts: true
