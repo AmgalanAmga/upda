@@ -1,7 +1,7 @@
 "use client";
 
 const Home = () => {
-  return <div>Home www</div>;
+  return <div>Home www ww</div>;
 };
 
 export default Home;
