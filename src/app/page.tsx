@@ -1,7 +1,7 @@
-import React from "react";
+import { useState } from "react";
 
-const HOme = () => {
-  return <div>HOmei uhasiuhd </div>;
+const Home = () => {
+  return <div>Home</div>;
 };
 
-export default HOme;
+export default Home;
