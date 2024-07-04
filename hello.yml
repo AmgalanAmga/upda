@@ -4,6 +4,7 @@ on:
   pull_request:
     types:
       - closed
+      - labeled
     branches:
       - main
 
@@ -12,7 +13,7 @@ permissions:
 
 jobs:
   updatebranhces:
-    if: "${{ github.event.pull_request.merged == true }}"
+    if: "${{  github.event.pull_request.merged == true || github.event.label.name == 'Update Me' }}"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
