@@ -15,4 +15,3 @@ jobs:
         uses: castastrophe/actions-pr-auto-update@main
         with:
           token: ${{ secrets.USER_TOKEN }}
-          include_drafts: true
