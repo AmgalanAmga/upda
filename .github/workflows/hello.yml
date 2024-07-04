@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   updatebranhces:
-    if: "${{  github.event.pull_request.merged == true || github.event.label.name == 'PR status: code ready' }}"
+    if: "${{  github.event.pull_request.merged == true || github.event.label.name == 'Update Me' }}"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
