@@ -7,13 +7,12 @@ on:
     branches:
       - main
 
-permissions:
-  pull-requests: write
-
 jobs:
   updatebranhces:
     runs-on: ubuntu-latest
     if: "${{ github.event.label.name == 'Update Me' }}"
+    permissions:
+      pull-requests: write
     steps:
       - uses: actions/checkout@v3
       - name: Validate USER_TOKEN
