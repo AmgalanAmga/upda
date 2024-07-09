@@ -22,7 +22,7 @@ jobs:
       - name: Update ALL THE PRS!
         uses: castastrophe/actions-pr-auto-update@main
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.USER_TOKEN }}
           include_drafts: true
           # include_labels: "PR status: code ready"
           include_labels: "Update"
