@@ -26,3 +26,16 @@ jobs:
           include_drafts: true
           # include_labels: "PR status: code ready"
           include_labels: "Update"
+      - name: Remove Cloud label
+        uses: actions-ecosystem/action-remove-labels@v1
+        with:
+          github_token: ${{ secrets.USER_TOKEN }}
+          labels: |
+            Cloud
+
+      - name: Add Cloud label
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          github_token: ${{ secrets.USER_TOKEN }}
+          labels: |
+            Cloud
