@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-l{
-    ss
+ll {
+  color: rebeccapurple;
+}
+
+w {
+  columns: 3;
 }
